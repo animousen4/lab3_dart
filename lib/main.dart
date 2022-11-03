@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lab3_dart/view/screen/home/home_screen.dart';
 import 'package:lab3_dart/view/theme/app_theme.dart';
-import 'package:lab3_dart/view/widgets/room.dart';
+
 
 void main() {
   runApp(const MyApp());

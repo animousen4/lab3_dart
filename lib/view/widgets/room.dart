@@ -27,6 +27,7 @@ class RoomWidget extends StatelessWidget {
                 child: Wrap(
                   spacing: spacing,
                   direction: Axis.vertical,
+                  
                   children: [for (int i = 0; i < leftPlaces && index < places; () {i++; index++;}) Text("$index")],
                 ),
                 alignment: Alignment.centerLeft),

@@ -54,8 +54,8 @@ class _HomeScreenState extends State<HomeScreen>
                                 child: Text("Start"))),
                         Expanded(
                             flex: 18,
-                            child: ListView.builder(
-                              itemBuilder: (context, index) => ListTile(
+                            child: AnimatedList(
+                              itemBuilder: (context, index, a) => ListTile(
                                   leading: SizedBox(
                                     width: 30,
                                     height: 70,
@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen>
                                         : Placeholder(),
                                   ),
                                   title: Text("${state.students[index].name}")),
-                              itemCount: state.students.length,
+                              initialItemCount: state.students.length,
                             )),
                       ],
                     ),

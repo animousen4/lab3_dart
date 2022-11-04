@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lab3_dart/logic/bloc/room/home_bloc.dart';
+import 'package:lab3_dart/view/widgets/lyrics_box.dart';
 import 'package:lab3_dart/view/widgets/participant.dart';
 
 class RoomWidget extends StatelessWidget {
@@ -29,6 +30,9 @@ class RoomWidget extends StatelessWidget {
         return 
           Stack(
           children: [
+            Align(alignment: Alignment.center, 
+              child: LyricsBox(),
+            ),
             Align(
                 child: Wrap(
                   spacing: spacing,
@@ -37,6 +41,7 @@ class RoomWidget extends StatelessWidget {
                   children: [ for ( ; index < leftPlaces; index++) builder(leftPlaces - 1 - index)],
                 ),
                 alignment: Alignment.centerLeft),
+
             Align(
                 child: Wrap(
                   spacing: spacing,
